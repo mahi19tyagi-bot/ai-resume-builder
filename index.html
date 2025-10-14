@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ResumeCraft AI - Creative Resume Builder</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+<div class="topbar">
+  <div class="brand">
+    <h1>ResumeCraft AI</h1>
+    <p>Creative & Career-Ready Resumes Instantly</p>
+  </div>
+  <div class="top-actions">
+    <button id="downloadBtn" class="btn primary">Download PDF</button>
+    <button id="themeToggle" class="btn secondary">🌙 Dark/Light Mode</button>
+  </div>
+</div>
+
+<div class="main-grid">
+  <div class="form-panel panel">
+    <h2>Enter Your Details</h2>
+    <div class="templates-row">
+      <button class="template-thumb" data-template="classic"><div class="thumb classic-thumb">Classic</div></button>
+      <button class="template-thumb" data-template="modern"><div class="thumb modern-thumb">Modern</div></button>
+      <button class="template-thumb" data-template="creative"><div class="thumb creative-thumb">Creative</div></button>
+    </div>
+
+    <form id="resumeForm">
+      <div class="group">
+        <label>Profile Photo <span class="desc">(Optional - appears on resume)</span></label>
+        <input type="file" id="photo" accept="image/*">
+      </div>
+      <div class="group">
+        <label>Full Name <span class="desc">(Prominently displayed)</span></label>
+        <div class="voice-input"><input type="text" id="fullName"><button type="button" class="mic" data-target="fullName">🎤</button></div>
+      </div>
+      <div class="group">
+        <label>Phone Number <span class="desc">(Professional)</span></label>
+        <div class="voice-input"><input type="text" id="phone"><button type="button" class="mic" data-target="phone">🎤</button></div>
+      </div>
+      <div class="group">
+        <label>Email <span class="desc">(Professional email)</span></label>
+        <div class="voice-input"><input type="email" id="email"><button type="button" class="mic" data-target="email">🎤</button></div>
+      </div>
+      <div class="group">
+        <label>LinkedIn URL <span class="desc">(Recommended)</span></label>
+        <div class="voice-input"><input type="url" id="linkedin"><button type="button" class="mic" data-target="linkedin">🎤</button></div>
+      </div>
+      <div class="group">
+        <label>Location <span class="desc">(City, State)</span></label>
+        <div class="voice-input"><input type="text" id="location"><button type="button" class="mic" data-target="location">🎤</button></div>
+      </div>
+      <div class="group">
+        <label>Summary <span class="desc">(Highlight achievements & key skills)</span></label>
+        <div class="voice-input"><textarea id="summary"></textarea><button type="button" class="mic" data-target="summary">🎤</button></div>
+      </div>
+      <div class="group">
+        <label>Professional Experience <span class="desc">(Company, Job Title, Duration, 3-5 key achievements)</span></label>
+        <input type="text" id="company1" placeholder="Company & Location">
+        <input type="text" id="jobTitle1" placeholder="Job Title">
+        <input type="text" id="duration1" placeholder="Month Year – Month Year">
+        <textarea id="experience1" placeholder="3–5 bullet points with achievements"></textarea>
+      </div>
+      <div class="group">
+        <label>Education <span class="desc">(Degree, Institution, Graduation Date)</span></label>
+        <input type="text" id="degree1" placeholder="Degree (Major/Minor)">
+        <input type="text" id="eduInstitution1" placeholder="Institution & Location">
+        <input type="text" id="graduation1" placeholder="Graduation Date">
+      </div>
+      <div class="group">
+        <label>Technical Skills</label>
+        <textarea id="techSkills"></textarea>
+      </div>
+      <div class="group">
+        <label>Soft Skills</label>
+        <textarea id="softSkills"></textarea>
+      </div>
+      <div class="group">
+        <label>Projects</label>
+        <textarea id="projects"></textarea>
+      </div>
+      <div class="group">
+        <label>Certifications / Awards <span class="desc">(Upload multiple files)</span></label>
+        <input type="file" id="attachments" multiple>
+      </div>
+      <div class="group">
+        <label>Languages</label>
+        <input type="text" id="languages">
+      </div>
+    </form>
+
+    <div class="group ai-controls">
+      <button class="btn primary" id="generateBtn">Generate AI Suggestions</button>
+      <button class="btn secondary" id="applyAllBtn">Apply All</button>
+      <button class="btn secondary" id="readAloudBtn">Read Aloud</button>
+    </div>
+  </div>
+
+  <div class="preview-panel panel">
+    <div class="preview-container" id="preview"></div>
+  </div>
+
+  <div class="ai-panel panel">
+    <h2>AI Suggestions</h2>
+    <div class="ai-list" id="aiSuggestions"></div>
+  </div>
+</div>
+
+<!-- Features Section -->
+<div class="features-panel panel">
+  <h2>What's Special About ResumeCraft AI?</h2>
+  <ul>
+    <li>Generate professional, career-focused resumes instantly.</li>
+    <li>AI suggestions for missing details or improvements.</li>
+    <li>Dynamic templates: Classic, Modern, Creative – fully A4 optimized.</li>
+    <li>Photo upload and attachment inclusion for certificates/projects.</li>
+    <li>Voice input for all fields to quickly fill your resume.</li>
+    <li>Dark/Light mode toggle for personalized experience.</li>
+    <li>Single-page PDF generation using whole page efficiently, auto-adjusting content.</li>
+    <li>AI suggestions never empty, always providing guidance.</li>
+    <li>Distinctive template layouts, fonts, borders, and section styling.</li>
+    <li>Responsive for desktop and mobile devices.</li>
+  </ul>
+</div>
+
+<div class="team-section">
+Made by Mahi Tyagi & Abhiroop Saha from Adarsh Public School, Vikas Puri
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
