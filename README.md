@@ -157,3 +157,12 @@ The input panel collects the following information:
 - Use **Attachments** for certificates or project screenshots to strengthen resume credibility.  
 - Review AI suggestions before applying for professional touch.  
 - Toggle **Dark/Light Mode** depending on your environment.
+  
+## The Team
+
+**Team Name:** CodeX Innovators  
+
+**Mahi Tyagi**  
+**Abhiroop Saha** 
+
+Adarsh Public School, C Block, Vikas Puri  
