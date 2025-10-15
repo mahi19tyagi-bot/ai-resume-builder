@@ -19,7 +19,6 @@
     <button id="themeToggle" class="btn secondary">🌙 Dark/Light Mode</button>
   </div>
 </div>
-
 <div class="main-grid">
   <div class="form-panel panel">
     <h2>Enter Your Details</h2>
@@ -28,7 +27,6 @@
       <button class="template-thumb" data-template="modern"><div class="thumb modern-thumb">Modern</div></button>
       <button class="template-thumb" data-template="creative"><div class="thumb creative-thumb">Creative</div></button>
     </div>
-
     <form id="resumeForm">
       <div class="group">
         <label>Profile Photo <span class="desc">(Optional - appears on resume)</span></label>
@@ -51,8 +49,16 @@
         <div class="voice-input"><input type="url" id="linkedin"><button type="button" class="mic" data-target="linkedin">🎤</button></div>
       </div>
       <div class="group">
+        <label>Portfolio / Website <span class="desc">(Optional)</span></label>
+        <div class="voice-input"><input type="url" id="portfolio"><button type="button" class="mic" data-target="portfolio">🎤</button></div>
+      </div>
+      <div class="group">
         <label>Location <span class="desc">(City, State)</span></label>
         <div class="voice-input"><input type="text" id="location"><button type="button" class="mic" data-target="location">🎤</button></div>
+      </div>
+      <div class="group">
+        <label>Profession Category <span class="desc">(Auto-generated)</span></label>
+        <input type="text" id="profession" readonly placeholder="AI will suggest your profession based on resume content">
       </div>
       <div class="group">
         <label>Summary <span class="desc">(Highlight achievements & key skills)</span></label>
@@ -91,26 +97,29 @@
         <label>Languages</label>
         <input type="text" id="languages">
       </div>
+      <div class="group">
+        <label>Achievements & Awards (Details) <span class="desc">(Optional)</span></label>
+        <textarea id="achievements" placeholder="e.g. Award Name – Issuing Body, Year"></textarea>
+      </div>
+      <div class="group">
+        <label>Hobbies / Interests <span class="desc">(Optional)</span></label>
+        <textarea id="hobbies" placeholder="e.g. Reading, Sketching, Sports"></textarea>
+      </div>
     </form>
-
     <div class="group ai-controls">
       <button class="btn primary" id="generateBtn">Generate AI Suggestions</button>
       <button class="btn secondary" id="applyAllBtn">Apply All</button>
       <button class="btn secondary" id="readAloudBtn">Read Aloud</button>
     </div>
   </div>
-
   <div class="preview-panel panel">
     <div class="preview-container" id="preview"></div>
   </div>
-
   <div class="ai-panel panel">
     <h2>AI Suggestions</h2>
     <div class="ai-list" id="aiSuggestions"></div>
   </div>
 </div>
-
-<!-- Features Section -->
 <div class="features-panel panel">
   <h2>What's Special About ResumeCraft AI?</h2>
   <ul>
@@ -126,11 +135,9 @@
     <li>Responsive for desktop and mobile devices.</li>
   </ul>
 </div>
-
 <div class="team-section">
 Made by Mahi Tyagi & Abhiroop Saha from Adarsh Public School, Vikas Puri
 </div>
-
 <script src="script.js"></script>
 </body>
 </html>
